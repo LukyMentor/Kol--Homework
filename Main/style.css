@@ -5,7 +5,8 @@ body {
 
 /* NAV */
 .navbar-brand {
-    font-size: 1.6em !important;
+    font-size: 1.7em !important;
+    margin-left: 1vw;
 }
 
 .nav-link {
@@ -13,12 +14,20 @@ body {
 }
 
 .nav-item {
-    padding: 2% !important;
+    padding: 0.3vw !important;
 }
 
 .nav-item:first-child {
-    display: block !important;
-    padding-left: 20% !important;
+    margin-left: 5vw;
+}
+
+/* NAV POSITIONING */
+.ml-auto {
+    margin-right: 2%;
+  }
+
+.nav-link > i {
+    display: inline-block;
 }
 
 /* NAV HOVER */
@@ -30,6 +39,7 @@ li a {
 
   li > a:hover {
     color: #24292D;
+    cursor: pointer;
   }
 
 li > a:before {
@@ -51,4 +61,23 @@ li > a:before {
     visibility: visible;
     -webkit-transform: scaleX(1);
     transform: scaleX(1);
+  }
+
+  /* NAV MULTILEVEL RESPONSIVE*/
+  .dropdown-submenu {
+    position: relative;
+  }
+  
+  .dropdown-submenu a::after {
+    transform: rotate(-90deg);
+    position: absolute;
+    right: 6px;
+    top: .8em;
+  }
+  
+  .dropdown-submenu .dropdown-menu {
+    top: 0;
+    left: 100%;
+    margin-left: .1rem;
+    margin-right: .1rem;
   }
