@@ -10,7 +10,7 @@ body {
 }
 
 .nav-link {
-    font-size: 1.5em !important;
+    font-size: 1.3em !important;
 }
 
 .nav-item {
@@ -91,19 +91,30 @@ li > a:before {
     margin-right: .1rem;
   }
 
+  /* CARDS */
+
 .card {
     width: 18rem;
+    margin-top: 5em;
+    width: 40vw;
+    border: 0 !important;
+    border: 2px dashed var(--dark) !important;
 }
 
-/* TIMELINE */
+.card-body {
+    width: 40vw;
+    margin-top: -1%;
+}
 
+
+/* TIMELINE */
 
 :root {
 	--white: #ffffff;
 	--black: #000000;
     --dark: #343a40; 
-	--gray:#ebebeb;
-	--box-shadow1:0px 0px 18px 2px rgba(10, 55, 90, 0.15);
+	--gray: #a6a6a6;
+	--box-shadow1: 0px 0px 18px 2px rgba(10, 55, 90, 0.15);
 }
 
 .timeline {
@@ -118,6 +129,7 @@ li > a:before {
 .timeline-nodes:nth-child(even) {
     flex-direction: row-reverse;
 }
+
 .timeline h3, .timeline p {
     padding: 5px 15px;
 } 
@@ -136,12 +148,13 @@ li > a:before {
     left: 50%;
     width: 0;
     border-left: 2px dashed var(--dark);
-    height: 100%;
+    height: 100vw;
+    margin-top: -7%;
     z-index: 1;
     transform: translateX(-50%);
 }
 .timeline-content {
-    border: 1px solid var(--dark);
+    border: 3px solid var(--dark);
     position: relative;
     border-radius: 0 0 10px 10px;
     box-shadow: 0px 3px 25px 0px rgba(10, 55, 90, 0.2)
@@ -194,14 +207,14 @@ li > a:before {
     transform: translate(-50%,-50%);
     background-color: #fff;
     z-index: 1;
-    
-
 }
+
 .timeline-image img {
     position: relative;
     z-index: 100;
 }
-/*small device style*/
+
+/* SMALL DEVICES */
 
 @media (max-width: 767px) {
     .timeline-nodes:nth-child(odd) h3,
@@ -233,7 +246,6 @@ li > a:before {
     position: absolute;
     left: 0%;
     top: 60px;
-    /*transform: translateX(-50%;);*/
 }
 .timeline-nodes:nth-child(odd) .timeline-content::after {
     content: "";
@@ -266,7 +278,7 @@ li > a:before {
 }
 }
 
-/*extra small device style */
+/* EXTRA SMALL DEVICES */
 @media (max-width: 575px) {
     .timeline::before {
     content: "";
@@ -285,10 +297,15 @@ li > a:before {
 }
 }
 
-/* ICONS STYLING */
-.calendar {
-  width: 3vw;
+
+/* TIME H4*/
+.timeArticleR {
+    color: var(--gray);
+    text-align: right;
+    margin-right: 2vh;
 }
+
+
 
 
 /* ANIMATIONS FOR TIMELINE */
